@@ -3,11 +3,11 @@ const io =require('socket.io')
 
 const apiServer = require('./api.js');
 const httpServer = http.createServer(apiServer);
-const socketServer = io(httpServer, {/*
+const socketServer = io(httpServer, {
   cors: {
     origin: '*',
     methods: ['GET', 'POST']
-  }*/
+  }
 });
 
 const socket = require('./sockets.js');
